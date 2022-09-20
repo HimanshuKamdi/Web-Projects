@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #1c0522;
+}
+
+.sec{
+    position: absolute;
+    background: transparent;
+    z-index: 3;
+    width: 100vw;
+}
+.sec h1{
+    font-size: 100px;
+    margin-top: 20vh;
+    margin-bottom: 10vh;
+    font-family: 'Permanent Marker', cursive;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: transparent;  
+    pointer-events: none;
+}
+.sec h1 span{
+    padding: 5px;
+    animation: glow 4s linear infinite;
+    animation-delay: calc( 0.1s * var(--i));
+}
+@keyframes glow {
+    0% {color: #fff;
+      filter:  hue-rotate(0deg);
+      text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px #00b3ff;
+
+    }
+    50%{           
+            color: #fff;
+            filter:  hue-rotate(360deg);
+            text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px #00b3ff;
+
+    }
+    100%{
+        color: #fff;
+      filter:  hue-rotate(0deg);
+      text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+        0 0 80px #00b3ff ;
+        
+    }
+
+  }
+
+footer{
+    background: transparent;
+    padding: 15px 23px;
+    color: #fff;
+    text-align: center;
+}
+
+footer span a{
+    color: crimson;
+    font-family: cursive;
+    font-size: 20px;
+    text-decoration: none;
+}
+footer span a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width:600px) {
+    .sec h1{
+        font-size: 80px;
+    }
+}
+@media (max-width:400px) {
+    .sec h1{
+        font-size: 60px;
+    }
+}

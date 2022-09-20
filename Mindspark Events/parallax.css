@@ -1,0 +1,79 @@
+#parallax{
+    min-height: 100vh;
+    background: linear-gradient(#2b1055,#7597de);
+    overflow-x: hidden;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#1c0522,transparent);
+    z-index: 1000;
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon{
+    mix-blend-mode: screen;
+}
+section img#mountains_front{
+    z-index: 10;
+}
+#text{
+    position: absolute;
+    color: #fff;
+    white-space: nowrap;
+    font-family: 'Mochiy Pop One', sans-serif;
+    font-size: 80px;
+    z-index: 19;
+    transform: translateY(-30px);
+}
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: linear-gradient(90deg,#755bea,#ff72c0);
+    color: #fff;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+@media(max-width:700px){
+    #text{
+        font-size: 60px;
+    }
+}
+@media(max-width:480px){
+    #text{
+        font-size: 45px;
+        
+    }
+    #btn{
+        font-size: 1.2em;
+        padding: 6px 20px;
+    }
+}
+@media(max-width:350px){
+    #text{
+        font-size: 38px;
+    }
+}
